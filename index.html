@@ -46,7 +46,7 @@
 
         #cover-img {
             width: 100%;
-            height: auto; /* Ubah height menjadi auto agar responsif */
+            height: auto; 
             background-size: cover;
         }
 
@@ -59,8 +59,8 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 16px; /* Memberikan jarak antara rectangle */
-            padding: 0 16px; /* Menambah padding di kanan dan kiri */
+            gap: 16px; 
+            padding: 0 16px; 
         }
 
         .rectangle {
@@ -69,27 +69,27 @@
             background-color: #000;
             padding: 8px;
             display: flex;
-            flex-direction: row; /* Pastikan konten berada dalam satu baris */
+            flex-direction: row; 
             overflow: hidden;
-            border-radius: 8px; /* Menambah sudut bulat */
+            border-radius: 8px; 
         }
 
         .left {
-            width: 30%;
+            flex: 1 1 30%; /* Menggunakan flex untuk responsivitas */
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #222; /* Ubah warna latar belakang */
+            background-color: #222; 
         }
 
         .left img {
             width: 100%;
-            height: auto; /* Ubah height menjadi auto agar responsif */
+            height: auto; 
             object-fit: contain;
         }
 
         .content-right {
-            width: 70%;
+            flex: 2 1 70%; /* Menggunakan flex untuk responsivitas */
             display: flex;
             flex-direction: column;
             padding: 8px;
@@ -97,7 +97,7 @@
         }
 
         .top-right {
-            height: 30%;
+            flex: 0 1 30%; /* Ubah menjadi flex untuk responsivitas */
             display: flex;
             align-items: center;
             background-color: #333;
@@ -105,13 +105,13 @@
         }
 
         .title h3 {
-            font-size: 2.5rem; /* Ubah ukuran font agar responsif */
+            font-size: 2.5rem; 
             color: white;
-            margin: 0; /* Menghapus margin */
+            margin: 0; 
         }
 
         .bottom-right {
-            height: 60%; /* Ubah height untuk memberi ruang pada tombol */
+            flex: 1; /* Mengambil ruang yang tersisa */
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -120,132 +120,63 @@
         }
 
         .text-content {
-            flex: 1; /* Mengambil ruang yang tersisa */
+            flex: 1; 
         }
 
         .text-content p {
             color: white;
             text-align: left;
-            font-size: 1rem; /* Ubah ukuran font agar responsif */
-            margin-top: -128px; /* Menghapus margin */
-            margin-left: 1px;
+            font-size: 1rem; 
+            margin: 0; /* Menghapus margin */
         }
 
-        #rec1 {
-    background-color: rgb(176, 17, 17);
-}
-
-#cr1 {
-    background-color: rgb(176, 17, 17);
-}
-
-#tr1 {
-    background-color: rgb(176, 17, 17);
-}
-
-#br1{
-    background-color: rgb(176, 17, 17);
-}
-
-#img1 {
-    background-color: rgb(176, 17, 17);
-}
-
-/* RECTANGLE 2 */
-#rec2 {
-    background-color: rgb(176, 168, 17);
-}
-
-#cr2 {
-    background-color: rgb(176, 168, 17);
-}
-
-#tr2 {
-    background-color: rgb(176, 168, 17);
-}
-
-#br2 { 
-    background-color: rgb(176, 168, 17);
-}
-
-#img2 {
-    background-color: rgb(176, 168, 17);
-}
-
-/* RECTANGLE 3 */
-
-#rec3 {
-    background-color: rgb(17, 176, 102);
-}
-
-#cr3 {
-    background-color: rgb(17, 176, 102);
-}
-
-#tr3 {
-    background-color: rgb(17, 176, 102);
-}
-
-#br3 { 
-    background-color: rgb(17, 176, 102);
-}
-
-#img3 {
-    background-color: rgb(17, 176, 102)
-}
-
         .buy-button {
-            width: 80px; /* Atur lebar tombol */
-            height: 30px; /* Atur tinggi tombol */
+            width: 80px; 
+            height: 30px; 
             background-color: #ffc108;
             color: black;
             border: none;
             border-radius: 3px;
-            font-size: 1rem; /* Ubah ukuran font agar responsif */
+            font-size: 1rem; 
             cursor: pointer;
-            margin-top: 8px; /* Jarak di atas tombol */
-            align-self: flex-start; /* Menempatkan tombol di sebelah kiri */
+            margin-top: 8px; 
+            align-self: flex-start; 
         }
 
         /* Media Queries untuk responsivitas */
         @media (max-width: 768px) {
             .rectangle {
-                flex-direction: column; /* Mengubah menjadi kolom pada layar kecil */
+                flex-direction: column; 
             }
 
-            .left {
-                width: 100%; /* Membuat gambar mengambil lebar penuh */
-                height: auto; /* Ubah height menjadi auto */
-            }
-
-            .content-right {
-                width: 100%; /* Membuat konten kanan mengambil lebar penuh */
+            .left, .content-right {
+                width: 100%; 
             }
 
             .title h3 {
-                font-size: 1.8rem; /* Menyesuaikan ukuran font pada perangkat kecil */
+                font-size: 1.8rem; 
             }
 
             .text-content p {
-                font-size: 0.9rem; /* Menyesuaikan ukuran font pada perangkat kecil */
+                font-size: 0.9rem; 
             }
 
             .buy-button {
-                font-size: 0.9rem; /* Menyesuaikan ukuran font pada perangkat kecil */
+                font-size: 0.9rem; 
             }
         }
 
         @media (max-width: 480px) {
             .title h3 {
-                font-size: 1.5rem; /* Menyesuaikan ukuran font pada perangkat kecil */
+                font-size: 1.5rem; 
             }
 
             .text-content p {
-                font-size: 0.8rem; /* Menyesuaikan ukuran font pada perangkat kecil */
+                font-size: 0.8rem; 
             }
 
             .buy-button {
-                font-size: 0.8rem; /* Menyesuaikan ukuran font pada perangkat kecil */
+                font-size: 0.8rem; 
             }
         }
     </style>
@@ -281,7 +212,7 @@
                 </div>
                 <div class="bottom-right" id="br1">
                     <div class="text-content">
-                        <p style="color: white;">Bosan dengan sepatu Anda sendiri? Ingin menjadi pusat perhatian audiens? Serahkan sepatu Anda kepada kami, konsultasikan motif yang anda inginkan dan jadilah keren. <br>Daftar Produk :<br>1. Sepatu, design pinterest / dari internet : start 20k <br> 2. Sepatu, design permintaan : start 40k (tergantung kerumitan)<br>Proses pengerjaan menggunakan spray yang anti luntur dan tahan lama</p>
+                        <p>Bosan dengan sepatu Anda sendiri? Ingin menjadi pusat perhatian audiens? Serahkan sepatu Anda kepada kami, konsultasikan motif yang anda inginkan dan jadilah keren. <br>Daftar Produk :<br>1. Sepatu, design pinterest / dari internet : start 20k <br> 2. Sepatu, design permintaan : start 40k (tergantung kerumitan)<br>Proses pengerjaan menggunakan spray yang anti luntur dan tahan lama</p>
                     </div>
                 </div>
                 <button class="buy-button">
